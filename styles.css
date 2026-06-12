@@ -845,7 +845,134 @@ body:hover .custom-cursor.active {
 .btn-text:hover i {
     transform: translateX(3px);
 }
+/* =========================
+   SKILLS SECTION
+========================= */
 
+.skills-section,
+.certifications-section {
+    padding: 80px 10%;
+    background: #0f172a;
+    color: #ffffff;
+    text-align: center;
+}
+
+.certifications-section {
+    background: #111827;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.section-subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+/* Skills Grid */
+
+.skills-grid,
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* Skill Cards */
+
+.skill-card,
+.certification-card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    cursor: pointer;
+}
+
+.skill-card:hover,
+.certification-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
+}
+
+/* Skill Titles */
+
+.skill-card h3,
+.certification-card h3 {
+    color: #38bdf8;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Certification Text */
+
+.certification-card p {
+    color: #e2e8f0;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.certification-card span {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Container */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Smooth Animation */
+
+.skill-card,
+.certification-card {
+    animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .skills-section,
+    .certifications-section {
+        padding: 60px 5%;
+    }
+
+    .skills-grid,
+    .certification-grid {
+        grid-template-columns: 1fr;
+    }
+}
 /* ==========================================================================
    CONTACT SECTION
    ========================================================================== */
